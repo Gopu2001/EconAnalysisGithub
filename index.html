@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>The Uncertainty of GitHub</title>
+    <style>
+      .header {
+        background-color: rgb(0,255,0);
+        width: 100%;
+        margin: 0px;
+        padding: 1px;
+        font-size: 27px;
+        font-family: 'Courier New', monospace;
+      }
+
+      .spacer {
+        width: 100%;
+      }
+      .spacer p {
+        font-size: 1.5vh;
+      }
+
+      .main {
+        background-color: rgb(175, 175, 175);
+        width: 93%;
+        padding: 4px 8px;
+        font-size: 22px;
+        z-index: 1;
+        margin: auto;
+      }
+      .main h3 p ul {
+        display: block;
+      }
+      .main p {
+        text-indent: 20px;
+        font-size: 18px;
+      }
+      .main ul {
+        font-size: 18px;
+      }
+      .main h1 {
+        text-align: center;
+      }
+      a:visited {
+        text-decoration: none;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 style="text-align: center">THE UNCERTAINTY<br> OF GITHUB</h1>
+    </div>
+    <div class="spacer"><p> <p></div>
+    <div class="main">
+      <h1>Problem Description</h1>
+      <h3>What is GitHub?</h3>
+      <p>
+        As a developer, open sourcing your code is all the rage. It helps
+        beginner and amateur developers gain skills and get noticed in the
+        professional community, while also helping recruiters determine if
+        an individual is up to a certain task and a good fit for a certain
+        role they are hiring for.
+      </p><p>
+        GitHub plays a major role for this kind of communication between the
+        individual looking for a job and recruiting companies looking to hire
+        individuals with valuable skills. In fact, because GitHub is used so
+        much, countless companies require that job applicants use a GitHub
+        account and profile to share their accomplishments and code projects
+        they have started and completed.
+      </p>
+      <h4 style="margin-bottom:8px;">An example user profile page on GitHub</h4>
+      <img src="GitHubScreenshot.png" alt="Screenshot of a GitHub User Profile" width="100%">
+      <p style="text-indent:0px; margin-top:0px; font-size:16px;">
+        The GitHub Website can be accessed by clicking
+        <a href="https://github.com/">here</a> or copying and pasting the URL
+        https://github.com/ in your web browser's address bar.
+      </p>
+      <img src="GitHubFailure.png" alt="Screenshot showing GitHub being blocked network-wide" width="100%">
+      <p style="text-indent:0px; margin-top:0px; font-size:16px;">
+        Under a typical secondary school administration network, this is what it looks like when
+        attempting to access GitHub.
+      </p>
+      <p>
+        Despite having all of these countless benefits, why do some schools,
+        particularly school districts that teach high school and middle school
+        students ban the use of GitHub on their network server? There's a simple
+        reason for that:
+      </p>
+      <h1>UNCERTAINTY</h1>
+      <h3>An Introduction to Uncertainty</h3>
+      <p>
+        According to the book <i>Essentials of ECONOMICS Seventh Edition</i>
+        written by John Sloman and Dean Garratt, when people are faced with
+        making choices based on what they perceive are the consequences of such
+        choices, they are faced with the uncertainty of what will happen in the
+        future that may be affected by such a decision. Similar to buying a new
+        mobile phone that lasts for 5 or so years, writing a rule in a rulebook
+        is filled with uncertainty as to how users who abide by the rulebook
+        will act (page 65). Just like the colors in the background of this website, you
+        do not know which color will appear when you reload the page or even
+        the next couple seconds.
+      </p>
+      <p>
+        According to Sloman and Garratt, "the more pessimistic we are, the more
+        cautious we will be" (page 66) when it comes to understanding how people
+        react to uncertainty. In terms of economics, this leads the rule makers
+        to determine that the optimal method is to err on the side of pessimism.
+      </p>
+      <h3>Glossary</h3>
+      <ul>
+        <li><b>developer</b>: one who programs software / hardware</li>
+        <li><b>open source</b>: where anyone and everyone has access to (read-write-copy) everything someone posts open-source</li>
+        <li><b>uncertainty</b>: when an outcome may or may not occur and the probability of its occurrence is not known</li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+      var t = null;
+      var r = Math.round(Math.random()*255); var rt = !!(Math.round(Math.random()));
+      var g = Math.round(Math.random()*255); var gt = !!(Math.round(Math.random()));
+      var b = Math.round(Math.random()*255); var bt = !!(Math.round(Math.random()));
+      function changeBackground() {
+        if(t != null) {
+          window.clearTimeout(t);
+        }
+
+        if(r == 255 || r == 154) {
+          rt = false;
+        } else if(r == 155 || r == 0) {
+          rt = true;
+        }
+        if(g == 255 || g == 154) {
+          gt = false;
+        } else if(g == 155 || g == 0) {
+          gt = true;
+        }
+        if(b == 255 || b == 154) {
+          bt = false;
+        } else if(b == 155 || b == 0) {
+          bt = true;
+        }
+
+        if(rt) {
+          r += 1;
+        } else {
+          r -= 1;
+        }
+        if(gt) {
+          g += 1;
+        } else {
+          g -= 1;
+        }
+        if(bt) {
+          b += 1;
+        } else {
+          b -= 1;
+        }
+        document.body.style.background = "rgb(" + r + "," + g + "," + b + ")";
+        t = window.setTimeout(changeBackground, 35);
+      }
+      changeBackground();
+    </script>
+  </body>
+</html>
